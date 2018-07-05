@@ -1,13 +1,12 @@
-docker run -v $(pwd):/var/loadtest -v $SSH_AUTH_SOCK:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent --net host -it direvius/yandex-tank
-
-docker run -it -v $(pwd):/var/loadtest  direvius/yandex-tank -c load.ini
+sudo docker run -v $(pwd):/var/loadtest  --net host  -it    direvius/yandex-tank -c load.ini
 
 
 
-rps_schedule=const(30, 20m) : 
-Response time distribution: 
-	2000	 21%
-	1500	 62%
-    10.20.17.153 anwer time: 2 => 3 min. соостветсвует r999_hs_read
+нужно поменять адрес в load.ini
 
-
+[phantom]
+address = 10.233.12.134:80
+rps_schedule=step(5, 60, 1, 5m)
+; const(100,10m) const(10,30s) step(10, 1, 1, 30s)
+ammo_type=uri
+ammofile=ammo.k8s.txt
