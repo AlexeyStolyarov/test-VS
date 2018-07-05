@@ -1,0 +1,13 @@
+docker run -v $(pwd):/var/loadtest -v $SSH_AUTH_SOCK:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent --net host -it direvius/yandex-tank
+
+docker run -it -v $(pwd):/var/loadtest  direvius/yandex-tank -c load.ini
+
+
+
+rps_schedule=const(30, 20m) : 
+Response time distribution: 
+	2000	 21%
+	1500	 62%
+    10.20.17.153 anwer time: 2 => 3 min. соостветсвует r999_hs_read
+
+

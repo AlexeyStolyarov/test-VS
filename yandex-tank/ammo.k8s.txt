@@ -1,0 +1,4 @@
+[Host: there-is-no-vhost]
+[Connection: close]
+/test
+
