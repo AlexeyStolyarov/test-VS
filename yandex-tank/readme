@@ -2,10 +2,10 @@ sudo docker run -v $(pwd):/var/loadtest  --net host  -it    direvius/yandex-tank
 
 
 
-нужно поменять адрес в load.ini
+нужно поменять адрес и порт в load.ini 
 
 [phantom]
-address = 10.233.12.134:80
+address =  192.168.99.22:31548
 rps_schedule=step(5, 60, 1, 5m)
 ; const(100,10m) const(10,30s) step(10, 1, 1, 30s)
 ammo_type=uri

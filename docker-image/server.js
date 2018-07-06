@@ -1,12 +1,8 @@
-server.js docs/tutorials  
 var http = require('http');
+var fs = require('fs');
+var index = fs.readFileSync('index.html');
 
-var handleRequest = function(request, response) {
-  console.log('Received request for URL: ' + request.url);
-  response.writeHead(200);
-  response.end('Hello World!');
-};
-var www = http.createServer(handleRequest);
-www.listen(8080);
-
-
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end(index);
+}).listen(8080);

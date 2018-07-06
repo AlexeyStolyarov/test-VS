@@ -24,7 +24,7 @@ metadata:
     app: hello-node
   name: hello-node
 spec:
-  replicas: 2
+  replicas: 1
   revisionHistoryLimit: 2
   selector:
     matchLabels:
@@ -35,7 +35,7 @@ spec:
         app: hello-node
     spec:
       containers:
-      - image: dodik78/hello-node:v1
+      - image: dodik78/hello-node:v2
         imagePullPolicy: IfNotPresent
         name: hello-node
         ports:
