@@ -1,5 +1,7 @@
 ## Комманды
 
+
+```
 docker build -t dodi78/hello-node:v2 .
 docker login
 docker push dodi78/hello-node:v2
@@ -12,9 +14,13 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/mast
 
 kubectl create -f ./node-test.yaml
 kubectl create -f ./node-nginx-ingress.yaml
+```
 
 # смотрим адрес
+
+```
 minikube service hello-node --url
+```
 
 cat ./yandex-tank/readme
 
