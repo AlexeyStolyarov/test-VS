@@ -45,3 +45,7 @@ https://docs.helm.sh/chart_template_guide
 Жизнь пода: https://habr.com/company/flant/blog/415393/ 
 Taints and Tolerations (чтобы выделить одну ноду только под ингресы) https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
 kubectl Cheat Sheet:  https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
+
+
+https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.10/#resource-operations
