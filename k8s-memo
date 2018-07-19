@@ -24,6 +24,12 @@ HPA - автомасштабирование подов. (min=2, max=6, cpu-usag
 ConfigMap - передача окружения для подов. из файлов.
 StateFullSet -- был разработан на замену PetSets. Как вы можете угадать из его названия, поды сопровождают своё состояние как часть развёртывания. Они разработаны для того чтбы иметь:
 
+You can manipulate labels for debugging. Because Kubernetes controllers (such as ReplicaSet) and Services match to Pods 
+using selector labels, removing the relevant labels from a Pod will stop it from being considered by a controller 
+or from being served traffic by a Service. 
+If you remove the labels of an existing Pod, its controller will create a new Pod to take its place. 
+This is a useful way to debug a previously “live” Pod in a “quarantine” environment. 
+To interactively remove or add labels, use kubectl label.
 
 
 We don’t want any other pod to be scheduled to this node so we set --register-schedulable=false 
