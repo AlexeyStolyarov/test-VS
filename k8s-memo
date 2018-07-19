@@ -37,6 +37,9 @@ when running the kubelet as well as giving it a convenient label: --node-labels=
 Kubernetes will run DaemonSets on every node of the cluster even if they are non-schedulable. 
 We only want this DaemonSet to run on the edge-router node so we use “nodeSelector” to match the label we previously added.
 
+deprecated way to have Kubernetes always pull the image is to use the :latest tag, 
+which will implicitly set the imagePullPolicy to Always.
+
 Ссылки:
 https://capgemini.github.io/kubernetes/kube-traefik/
 Configure Access to Multiple Clusters
